@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Rewriter.Tools">
+    <meta name="description" content="API Rewriter, Paraphrasing Documentation, Spinner, Content Re-writer">
+
+    <title>Spin Rewriter API, Article Rewriter Documentation, Paraphrasing, Reword</title>
+
+    <link rel="stylesheet" type="text/css" href="/css/style.min.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#333333">
+    <meta name="apple-mobile-web-app-title" content="Rewriter.Tools">
+    <meta name="application-name" content="Rewriter.Tools">
+    <meta name="theme-color" content="#ffffff">
+
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body style="background:#22272b">
+
+<nav class="nav-top navbar">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <div class="nav-top-mobile">
+                <div class="mobile-search">
+                    <a href="javascript:void(0)" class="mobile-search-trigger" role="button"><i class="fa fa-search" aria-hidden="true"></i></a>
+                    <div class="mobile-search-active animated fadeInDown">
+                        <div class="mobile-search-box">
+                            <i class="glyphicon glyphicon-search"></i>
+                            <input class="mobile-search-input" name="search" type="text" spellcheck="false" placeholder="Search ...">
+                            <button type="button" class="close">
+                                <span>&times;</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="logo ">
+                <a class="navbar-brand" href="/">
+                    <img src="/images/logo.svg" alt="Rewriter.Tools" id="logo">
+                    <span>Rewriter.Tools</span>
+                    <small class="hidden-xs">API Re-writer</small>
+                </a>
+            </div>
+        </div>
+
+        <div class="collapse navbar-collapse hidden-xs">
+            <ul class="nav navbar-nav navbar-right notify">
+                <li class="dropdown">
+                    <a href="#" class="lang dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">EN<span class="caret"></span></a>
+                    <ul class="lang-dropdown dropdown-menu animated flipInX">
+                        <li>
+                            <a class="lang-item" href="//sinoni.men">
+                                <img src="/images/RU.png" alt="Russian flag"> Russian
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="nav-search">
+                <input class="nav-search-input" type="text" name="search" spellcheck="false" placeholder="Search ...">
+                <i class="glyphicon glyphicon-search" aria-hidden="true"></i>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="contentWrapper">
+    <div class="row h1-text">
+        <h1 class="hidden-xs">API Tools, Re-writer Documentation, Spinner Text, Reword Article</h1>
+        <h4 class="hidden-xs hidden-sm">API Rewriter Tools, Paraphrasing, Spinner, Reword Generator.</h4>
+    </div>
+    <div class="row yes-pro">
+        <div class="col-xs-12">
+            <div class="typo-box">
+                <h3 class="text-center">POST requests to send to <code>api.rewriter.tools</code></h3>
+                <hr>
+                <h3>Send a task to rewrite text</h3>
+                <hr>
+                <p>Param: <code>token</code> - your token that you get in the control panel;</p>
+                <p>Param: <code>text</code> - your text to be unique;</p>
+                <p>Param: <code>lang</code> - the language in which your text is written;</p>
+                <p>Add. param: <code>unique</code> - check uniqueness (default: true);</p>
+                <p>Add. param: <code>double</code> - double rewrite (default: true).</p>
+                <p>If you successfully accept the text in the task, you will receive a unique ID.</p>
+                <pre class="prettyprint lang-json">
+    {
+        "result": {
+            "token": "8aee7ab77891731083d21b853d6ef12ca044beff"
+            "id": "00fd4b4549a1094aae926ef62e9dbd3cdcc2e456"
+        }
+    }</pre>
+                <p>For this ID in the next query, get the result of the rewrite of your text.</p>
+                <hr>
+                <h3>Getting the result of rewriting the text</h3>
+                <hr>
+                <p>Param: <code>token</code> - your token that you get in the control panel;</p>
+                <p>Param: <code>id</code> - ID of the text you want to receive.</p>
+                <p>If your rewrite is ready, you will receive a JSON result.</p>
+                <pre class="prettyprint lang-json">
+    {
+        "result": {
+            "rewrite": "Your rewrite",
+            "percent": 43.02,
+            "words": 2034,
+            "spam": 20,
+            "water": 34
+        }
+    }</pre>
+                <p>If your text is still being processed, the result will be an error with code 101.</p>
+                <pre class="prettyprint lang-json">
+    {
+        "error": {
+            "code": 101,
+            "msg": "Your rewrite is not ready yet"
+        }
+    }</pre>
+                <hr>
+                <h3>List of possible errors when working with API</h3>
+                <hr>
+                <p><code>101</code> - Your rewrite is not ready yet</p>
+                <p><code>102</code> - Please fill in the «token» field</p>
+                <p><code>103</code> - Please fill in the «lang» field</p>
+                <p><code>104</code> - Please fill in the «text» field</p>
+                <p><code>105</code> - The «text» field must consist of letters of the English alphabet</p>
+                <p><code>106</code> - The «text» field must be 100 characters long</p>
+                <p><code>107</code> - In the «text» field you have gone beyond the limit</p>
+                <p><code>108</code> - User does not exist</p>
+                <p><code>109</code> - API is not activated</p>
+                <hr>
+                <h3>A simple example on NodeJS</h3>
+                <hr>
+                <p>Install package <code>sinoni</code></p>
+                <pre class="prettyprint lang-bash">
+    npm i sinoni</pre>
+                <pre class="prettyprint lang-js">
+    const sinoni = require('sinoni');
+    sinoni({
+        token: "8aee7ab77891731083d21b853d6ef12ca044beff",
+        text: "Your article",
+        lang: "en"
+    }).then(res => {
+        console.log(res.rewrite); // Your rewrite
+    }).catch(console.error);</pre>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="nav-bottom navbar nav-fixed">
+        <div class="row">
+            <a class="col-xs-2 nav-dash" href="/">
+                <i class="fa fa-hand-rock-o" aria-hidden="true"></i><br>
+                <span class="hidden-xs">Rewriter</span>
+            </a>
+            <a class="col-xs-2 nav-api currentPage" href="/en/api.html">
+                <i class="fa fa-code" aria-hidden="true"></i><br>
+                <span class="hidden-xs">API</span>
+            </a>
+            <a class="col-xs-2 nav-profile" href="/en/profile.html">
+                <i class="fa fa-user" aria-hidden="true"></i><br>
+                <span class="hidden-xs">Profile</span>
+            </a>
+            <a class="col-xs-2 nav-price" href="/en/price.html">
+                <i class="fa fa-usd" aria-hidden="true"></i><br>
+                <span class="hidden-xs">Price 7 cents</span>
+            </a>
+            <a class="col-xs-2 nav-news" href="/en/news.html">
+                <i class="fa fa-newspaper-o" aria-hidden="true"></i><br>
+                <span class="hidden-xs">News</span>
+            </a>
+            <a class="col-xs-2 nav-contacts" href="/en/contacts.html">
+                <i class="fa fa-envelope-o" aria-hidden="true"></i><br>
+                <span class="hidden-xs">Contacts</span>
+            </a>
+        </div>
+    </div>
+</footer>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="//cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+<script src="/js/custom.min.js"></script>
+
+</body>
+</html>
