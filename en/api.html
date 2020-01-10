@@ -92,7 +92,7 @@
                 <p>Add. param: <code>unique</code> - check uniqueness (default as configured in profile true/false);</p>
                 <p>Add. param: <code>double</code> - double rewrite (default as configured in profile true/false);</p>
                 <p>Add. param: <code>webhook</code> - URL address (POST request with result will be sent to this URL).</p>
-                <p>If you successfully accept the text in the task, you will receive a unique ID. If the request contains the <code>webhook</code> parameter, the result will be sent automatically, as soon as it is ready, to the specified URL (for example: https://example.com/webhook) in the form of JSON.</p>
+                <p>If you successfully accept the text in the task, you will receive a unique ID.</p>
                 <pre class="prettyprint lang-json">
     {
         "status": "success",
@@ -101,7 +101,7 @@
             "token": "8aee7ab77891731083d21b853d6ef12ca044beff"
         }
     }</pre>
-                <p>For this ID in the next query, get the result of the rewrite of your text.</p>
+                <p>For this ID in the next query, get the result of the rewrite of your text. If the request contains the <code>webhook</code> parameter, the result will be sent automatically, as soon as it is ready, to the specified URL (for example: https://example.com/webhook) in the form of JSON.</p>
                 <hr>
                 <h3>Getting the result of rewriting the text</h3>
                 <hr>
